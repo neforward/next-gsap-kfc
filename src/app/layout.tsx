@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={platypi.className}>{children}</body>
+      <body className={londrinaSolid.className}>{children}</body>
     </html>
   );
 }

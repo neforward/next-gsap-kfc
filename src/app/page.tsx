@@ -1,4 +1,16 @@
+"use client";
+import { useEffect } from "react";
+import headerAnimation from "@/utils/header";
+import textAnimation from "@/utils/animationTxt";
+import basketAnimation from '@/utils/animationBasket';
+
 export default function Home() {
+  useEffect(() => {
+    headerAnimation();
+    textAnimation();
+    basketAnimation();
+  }, []);
+
   return (
     <>
       <header className="header">
@@ -16,7 +28,6 @@ export default function Home() {
               <span>Restaurants</span>
               <span>Where To Buy</span>
               <span>Locations</span>
-              <span></span>
             </div>
             <div className="header-cart">
               <img
@@ -32,28 +43,49 @@ export default function Home() {
       </header>
       <div className="hero">
         <div className="container">
-          <h2>a fiery burst of flavor that sparks pure satisfaction.</h2>
-          <h5>KFC Chicken Wings</h5>
-          <p>
-            Chicken, Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine
-            Mononitrate, Riboflavin, Folic Acid), Salt, Spices (Including Black
-            Pepper, White Pepper, Paprika), Monosodium Glutamate, Garlic Powder,
-            Onion Powder, Buttermilk Powder (Cultured Buttermilk, Whey), Corn
-            Starch, Natural Flavorings, Sodium Phosphates, Breading Set in
-            Vegetable Oil (Soybean Oil, Hydrogenated Soybean Oil with TBHQ and
-            Citric Acid added to preserve freshness, Dimethylpolysiloxane, an
-            Anti-foaming Agent added).
-          </p>
-          <strong>CONTAINS: WHEAT INGREDIENTS</strong>
-          <h4>$34.99</h4>
-          <button>Add to cart</button>
+          <div className="flexxx">
+            <div className="text-section">
+              <h2>Light fire under your tasty chicken</h2>
+              <h5>KFC Chicken Wings</h5>
+              <p>
+                Chicken, Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine
+                Mononitrate, Riboflavin) Salt Spices (Including Black Pepper,
+                White Pepper, Paprika), Monosodium Glutamate, Garlic Powder,
+                Onion Powder, Buttermilk Powder (Cultured Buttermilk, Whey),
+                Corn Starch, Natural Flavorings, Sodium Phosphates, Breading Set
+                in Vegetable Oil (Soybean Oil, Hydrogenated Soybean Oil with
+                TBHQ and Citric Acid added to preserve freshness,
+                Dimethylpolysiloxane, an Anti-foaming Agent added).
+              </p>
+              <h6>CONTAINS: WHEAT INGREDIENTS</h6>
+              <h4>$34.99</h4>
+              <button>Add to cart</button>
+            </div>
+            <div className="basket-section">
+              <div className="bg-yellow"></div>
+              <img
+                className="basket-image"
+                src="https://images.ctfassets.net/9tka4b3550oc/1FQSRLVXt2Q1lvXXkOyW6U/f306561ef7bfc5ab7c84a739a46d3629/Food_09.png?q=75&w=1280"
+                alt=""
+              />
+              <img
+                className="spicies"
+                src="https://yuzeyzer.github.io/ReactJS__Doritos/static/media/suyaPepper.07c5bdc5.png"
+                alt=""
+              />
+              <img
+                className="cheese"
+                src="https://cdn.culvers.com/menu/images/item/sauces-dressings/wi-cheddar-cheese.png?q=90&w=800&format=auto"
+                alt=""
+              />
+              <img
+                className="chicken-wing"
+                src="https://lirp.cdn-website.com/f24ef9b3/dms3rep/multi/opt/Wing_Snob_Leg-640w.png"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
-        {/* <img src="https://yuzeyzer.github.io/ReactJS__Doritos/static/media/suyaPepper.07c5bdc5.png" alt="" /> */}
-        {/* <img src="https://cdn.culvers.com/menu/images/item/sauces-dressings/wi-cheddar-cheese.png?q=90&w=800&format=auto" alt="" /> */}
-        {/* <img src="https://pngimg.com/d/kfc_food_PNG50.png" alt="" /> */}
-        {/* <img src="https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG14104.png" alt="" />  */}
-        {/* <img src="https://pngimg.com/d/fried_chicken_PNG97915.png" alt="" /> */}
-        {/* <img src="https://images.ctfassets.net/9tka4b3550oc/1FQSRLVXt2Q1lvXXkOyW6U/f306561ef7bfc5ab7c84a739a46d3629/Food_09.png?q=75&w=1280" alt="" /> */}
       </div>
     </>
   );

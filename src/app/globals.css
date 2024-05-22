@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+#banner-1 {
+  background: #ffc107;
+}
+#banner-2 {
+  background: #ffc107;
+}
+#banner-3 {
+  background: #ffc107;
+}
 body {
+  touch-action: pan-y;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,20 +25,24 @@ body {
   box-sizing: border-box;
 }
 .header {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 .header-logo {
   margin-left: 80px;
+  cursor: pointer;
 }
 .header-logo img {
   height: 60px;
 }
 .header-nav span {
+  font-family: "";
   margin-right: 40px;
   color: #fff;
   font-size: 14px;
   cursor: pointer;
   text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-100px);
 }
 .header-content {
   display: flex;
@@ -74,23 +88,28 @@ body {
   right: -8px;
   top: -8px;
 }
-
 .counter p {
   color: #fff;
   font-size: 12px;
 }
+.hero {
+  padding-top: 120px;
+}
 .hero h2 {
   font-weight: 900;
-  letter-spacing: vw(3);
   line-height: 1em;
+  letter-spacing: 0.15625vw;
   color: #ffc107;
   margin-bottom: vw(30);
   text-shadow: 0.15625vw 0.15625vw 0 #111;
   position: relative;
   overflow: hidden;
   height: vw(150);
-  font-size: 70px;
-  text-transform: uppercase;
+  font-size: 8vmin;
+  opacity: 0;
+  transform: translateY(100px);
+  max-width: 600px;
+  padding-bottom: 5px;
 }
 .hero h5 {
   font-weight: 900;
@@ -99,5 +118,170 @@ body {
   margin-bottom: 1.04167vw;
   text-transform: uppercase;
   text-shadow: 0.10417vw 0.10417vw 0 #111;
+  -webkit-text-stroke: 0.10417vw #111;
   font-size: 28px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.hero h6 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  transform: translateY(100px);
+  opacity: 0;
+}
+.hero h4 {
+  font-weight: 900;
+  letter-spacing: 0.05208vw;
+  color: #fff;
+  margin-bottom: 1.04167vw;
+  margin-top: 1.04167vw;
+  text-transform: uppercase;
+  text-shadow: 0.10417vw 0.10417vw 0 #111;
+  -webkit-text-stroke: 0.10417vw #111;
+  font-size: 35px;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.hero button {
+  background: #ffc107;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 40px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.05208vw;
+  cursor: pointer;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(100px);
+}
+.hero button:hover {
+  background: #000;
+  color: #ffc107;
+}
+.hero p {
+  color: #fff;
+  font-size: 14px;
+  max-width: 600px;
+  font-family: "Helvetica Neue";
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.basket-section {
+  position: relative;
+}
+.bg-yellow {
+  margin-right: 80px;
+  width: 640px;
+  height: 640px;
+  background-color: #ffc107;
+  border-radius: 30px;
+  z-index: -2;
+  opacity: 0;
+  transform: skew(-5deg, -5deg);
+}
+.basket-section .basket-image {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  max-width: 550px;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.basket-section .spicies {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.basket-section .cheese {
+  width: 230px;
+  position: absolute;
+  left: -40px;
+  bottom: 60px;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.basket-section .chicken-wing {
+  width: 300px;
+  position: absolute;
+  top: -30px;
+  right: 65px;
+  z-index: 5;
+  opacity: 0;
+  transform: translateY(-100px);
+
+}
+
+@media (max-width: 768px) {
+  .bg-yellow {
+    top: 200px;
+    right: 15px;
+    width: 300px;
+    height: 250px;
+  }
+}
+
+.flexxx {
+  margin-left: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1280px) {
+  .header-logo {
+    margin: 0;
+  }
+  .header-cart {
+    margin: 0;
+  }
+  .flexxx {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  .text-section {
+    padding-bottom: 200px;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .bg-yellow {
+    margin: 0;
+  }
+  .basket-section {
+    padding-bottom: 40px;
+  }
+  .basket-section .cheese {
+    width: 100px;
+    left: 0;
+  }
+  .basket-section .basket-image {
+    width: 220px;
+    left: 30px;
+  }
+  .basket-section .spicies {
+    width: 100px;
+    height: 100px;
+    right: 0;
+  }
+  .basket-section .chicken-wing {
+    width: 150px;
+    right: 0;
+    top: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-nav {
+    display: none;
+  }
 }
