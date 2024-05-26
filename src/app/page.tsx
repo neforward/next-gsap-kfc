@@ -45,7 +45,7 @@ export default function Home() {
         <div className="container">
           <div className="flexxx">
             <div className="text-section">
-              <h2>Light fire under your tasty chicken</h2>
+              <h2>Slight fire under your tasty chicken</h2>
               <h5>KFC Chicken Wings</h5>
               <p>
                 Chicken, Flour (Wheat Flour, Niacin, Reduced Iron, Thiamine

@@ -7,7 +7,6 @@ const londrinaSolid = Londrina_Solid({
 
   subsets: ["latin"],
 });
-// Barlow Condensed
 const platypi = Platypi({
   subsets: ["latin"],
   variable: "--font-platypi",

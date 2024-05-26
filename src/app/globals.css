@@ -108,7 +108,7 @@ body {
   font-size: 8vmin;
   opacity: 0;
   transform: translateY(100px);
-  max-width: 600px;
+  max-width: 650px;
   padding-bottom: 5px;
 }
 .hero h5 {
@@ -230,7 +230,6 @@ body {
     height: 250px;
   }
 }
-
 .flexxx {
   margin-left: 5rem;
   display: flex;
